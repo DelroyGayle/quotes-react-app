@@ -18,7 +18,7 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    fetch("https://temporal-incongruous-attention.glitch.me/api")
+    fetch("https://delroygayle-quote-server-app.glitch.me/api")
       .then((response) => {
         if (!response.ok) {
           let temp = `Could not fetch the data - ${response.status}`;
@@ -65,7 +65,7 @@ function App() {
   }
 
   function fetchNextQuote() {
-    fetch("https://temporal-incongruous-attention.glitch.me/api/quotes/random")
+    fetch("https://delroygayle-quote-server-app.glitch.me/api/quotes/random")
       .then((response) => {
         if (!response.ok || response.status < 200 || response.status > 204) {
           setFetchError2(response.statusText);
