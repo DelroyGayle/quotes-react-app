@@ -55,16 +55,6 @@ function App() {
     </div>
   );
 
-  function removeFadeOut(el, speed) {
-    var seconds = speed / 1000;
-    el.style.transition = "opacity " + seconds + "s ease";
-
-    el.style.opacity = 0;
-    setTimeout(function () {
-      el.parentNode.removeChild(el);
-    }, speed);
-  }
-
   function ErrorHandler({ error }) {
     return (
       <div role="alert">
@@ -101,7 +91,7 @@ function App() {
   /* Display the quote however make the font smaller
      if there are more than 25 words in the quote
   */
- 
+
   function Main() {
     return (
       <ErrorBoundary FallbackComponent={ErrorHandler}>
